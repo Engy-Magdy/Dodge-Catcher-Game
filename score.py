@@ -4,6 +4,7 @@ class Score(Turtle):
        
         super().__init__()
         self.score=0
+        self.highscore=self.update_highscore()
         self.color("white")
         self.penup()
         self.goto(0,250)
@@ -19,3 +20,9 @@ class Score(Turtle):
         self.clear()
         self.score+=10
         self.message()
+    def update_highscore(self):
+        with open("highscore.txt") as file:
+            return int(file.read())
+    def save_highscore(self):
+        with open("highscore.txt","w") as file:
+            file.write(str(self.highscore))
