@@ -33,6 +33,9 @@ while game_on:
                 message.penup()
                 message.goto(0,0)
                 message.write("Game Over",font=("courier",40,"normal"),align="center")
+                  if board_score.score>board_score.highscore:
+                    board_score.highscore=board_score.score
+                    board_score.save_highscore()
                 message.hideturtle()
                 game_on=False
                 screen.exitonclick()
