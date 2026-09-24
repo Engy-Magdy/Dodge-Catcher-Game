@@ -10,7 +10,7 @@ class Score(Turtle):
         self.goto(0,250)
         self.message()
     def message(self):
-        self.write(f"Score:{self.score}",font=("courier",30,"normal"),align="center")
+        self.write(f"Score:{self.score}   High Score:{self.highscore}",font=("courier",30,"normal"),align="center")
         self.hideturtle()
     def update_score_greenturtle(self):
         self.clear()
